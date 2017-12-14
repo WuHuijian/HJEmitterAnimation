@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "HJRainView.h"
+#import "HJSnowView.h"
 
 @interface ViewController ()
 
@@ -16,7 +18,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    HJRainView *rainView = [[HJRainView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:rainView];
+
+    [rainView show];
+
+    
+    HJSnowView *snowView = [[HJSnowView alloc] initWithFrame:self.view.bounds];
+    
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [rainView hide];
+        [self.view addSubview:snowView];
+        [snowView show];
+    });
+
+   
 }
 
 

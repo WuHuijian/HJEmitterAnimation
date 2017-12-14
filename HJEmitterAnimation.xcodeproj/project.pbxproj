@@ -15,6 +15,13 @@
 		D2457E711FE2695800566079 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D2457E701FE2695800566079 /* main.m */; };
 		D2457E7B1FE2695800566079 /* HJEmitterAnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2457E7A1FE2695800566079 /* HJEmitterAnimationTests.m */; };
 		D2457E861FE2695800566079 /* HJEmitterAnimationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2457E851FE2695800566079 /* HJEmitterAnimationUITests.m */; };
+		D2457EAB1FE26C0D00566079 /* HJEmitterLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2457EAA1FE26C0D00566079 /* HJEmitterLayerView.m */; };
+		D2457EAE1FE26D9C00566079 /* HJRainView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2457EAD1FE26D9C00566079 /* HJRainView.m */; };
+		D2BE09CD1FE2750C0012F824 /* rain.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BE09CC1FE2750C0012F824 /* rain.png */; };
+		D2BE09D01FE27E510012F824 /* HJSnowView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BE09CF1FE27E510012F824 /* HJSnowView.m */; };
+		D2BE09D41FE27F420012F824 /* snow03.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BE09D11FE27F410012F824 /* snow03.png */; };
+		D2BE09D51FE27F420012F824 /* snow01.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BE09D21FE27F410012F824 /* snow01.png */; };
+		D2BE09D61FE27F420012F824 /* snow02.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BE09D31FE27F420012F824 /* snow02.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +58,16 @@
 		D2457E811FE2695800566079 /* HJEmitterAnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HJEmitterAnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2457E851FE2695800566079 /* HJEmitterAnimationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HJEmitterAnimationUITests.m; sourceTree = "<group>"; };
 		D2457E871FE2695800566079 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2457EA91FE26C0D00566079 /* HJEmitterLayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HJEmitterLayerView.h; sourceTree = "<group>"; };
+		D2457EAA1FE26C0D00566079 /* HJEmitterLayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HJEmitterLayerView.m; sourceTree = "<group>"; };
+		D2457EAC1FE26D9C00566079 /* HJRainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HJRainView.h; sourceTree = "<group>"; };
+		D2457EAD1FE26D9C00566079 /* HJRainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HJRainView.m; sourceTree = "<group>"; };
+		D2BE09CC1FE2750C0012F824 /* rain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rain.png; sourceTree = "<group>"; };
+		D2BE09CE1FE27E510012F824 /* HJSnowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HJSnowView.h; sourceTree = "<group>"; };
+		D2BE09CF1FE27E510012F824 /* HJSnowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HJSnowView.m; sourceTree = "<group>"; };
+		D2BE09D11FE27F410012F824 /* snow03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snow03.png; sourceTree = "<group>"; };
+		D2BE09D21FE27F410012F824 /* snow01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snow01.png; sourceTree = "<group>"; };
+		D2BE09D31FE27F420012F824 /* snow02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snow02.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +118,7 @@
 		D2457E601FE2695800566079 /* HJEmitterAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				D2457EA41FE2697B00566079 /* ParticleAnimator */,
 				D2457E611FE2695800566079 /* AppDelegate.h */,
 				D2457E621FE2695800566079 /* AppDelegate.m */,
 				D2457E641FE2695800566079 /* ViewController.h */,
@@ -130,6 +148,55 @@
 				D2457E871FE2695800566079 /* Info.plist */,
 			);
 			path = HJEmitterAnimationUITests;
+			sourceTree = "<group>";
+		};
+		D2457EA41FE2697B00566079 /* ParticleAnimator */ = {
+			isa = PBXGroup;
+			children = (
+				D2457EA51FE2697B00566079 /* layers */,
+				D2457EA61FE2697B00566079 /* images */,
+				D2457EA71FE2697B00566079 /* bases */,
+				D2457EA81FE2697B00566079 /* effects */,
+			);
+			path = ParticleAnimator;
+			sourceTree = "<group>";
+		};
+		D2457EA51FE2697B00566079 /* layers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = layers;
+			sourceTree = "<group>";
+		};
+		D2457EA61FE2697B00566079 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				D2BE09D21FE27F410012F824 /* snow01.png */,
+				D2BE09D31FE27F420012F824 /* snow02.png */,
+				D2BE09D11FE27F410012F824 /* snow03.png */,
+				D2BE09CC1FE2750C0012F824 /* rain.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		D2457EA71FE2697B00566079 /* bases */ = {
+			isa = PBXGroup;
+			children = (
+				D2457EA91FE26C0D00566079 /* HJEmitterLayerView.h */,
+				D2457EAA1FE26C0D00566079 /* HJEmitterLayerView.m */,
+			);
+			path = bases;
+			sourceTree = "<group>";
+		};
+		D2457EA81FE2697B00566079 /* effects */ = {
+			isa = PBXGroup;
+			children = (
+				D2457EAC1FE26D9C00566079 /* HJRainView.h */,
+				D2457EAD1FE26D9C00566079 /* HJRainView.m */,
+				D2BE09CE1FE27E510012F824 /* HJSnowView.h */,
+				D2BE09CF1FE27E510012F824 /* HJSnowView.m */,
+			);
+			path = effects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,7 +306,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2457E6E1FE2695800566079 /* LaunchScreen.storyboard in Resources */,
+				D2BE09D41FE27F420012F824 /* snow03.png in Resources */,
 				D2457E6B1FE2695800566079 /* Assets.xcassets in Resources */,
+				D2BE09D61FE27F420012F824 /* snow02.png in Resources */,
+				D2BE09D51FE27F420012F824 /* snow01.png in Resources */,
+				D2BE09CD1FE2750C0012F824 /* rain.png in Resources */,
 				D2457E691FE2695800566079 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +339,9 @@
 				D2457E661FE2695800566079 /* ViewController.m in Sources */,
 				D2457E711FE2695800566079 /* main.m in Sources */,
 				D2457E631FE2695800566079 /* AppDelegate.m in Sources */,
+				D2457EAE1FE26D9C00566079 /* HJRainView.m in Sources */,
+				D2457EAB1FE26C0D00566079 /* HJEmitterLayerView.m in Sources */,
+				D2BE09D01FE27E510012F824 /* HJSnowView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +507,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2PZMTS6D3B;
 				INFOPLIST_FILE = HJEmitterAnimation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.psl.whj.HJEmitterAnimation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -447,6 +522,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2PZMTS6D3B;
 				INFOPLIST_FILE = HJEmitterAnimation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.psl.whj.HJEmitterAnimation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
